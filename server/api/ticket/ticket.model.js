@@ -7,7 +7,7 @@ var TicketSchema = new Schema({
   movieName: String,
   userName: String,
   seatNumber: String,
-  // userId: { type: Schema.Types.ObjectId, ref: "User"},
+  userId: { type: Schema.Types.ObjectId, ref: "User"},
   time: Date
 });
 
