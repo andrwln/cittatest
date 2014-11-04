@@ -1,0 +1,38 @@
+<div class="modal-header">
+    <h3 class="modal-title">Add New Ticket</h3>
+</div>
+<div class="modal-body">
+    <form class="form" name="form" novalidate>
+
+        <label>Your Name</label>
+        <input class="form-control"
+               type="text"
+               name="userName"
+               ng-model="ticket.userName">
+
+        <label>Seat Number</label>
+        <input class="form-control"
+               type="text"
+               name="seatNumber"
+               ng-model="ticket.seatNumber">
+
+        <label>Movie Name</label>
+        <input class="form-control"
+               type="text"
+               name="movieName"
+               ng-model="ticket.movieName">
+
+
+        <label>Movie Time</label>
+        <timepicker ng-model="ticket.time"
+                    ng-change="changed()"
+                    hour-step="hstep"
+                    minute-step="mstep"
+                    show-meridian="!ismeridian">
+        </timepicker>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="addTicket()">Submit Ticket</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>
